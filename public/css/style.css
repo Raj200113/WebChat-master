@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
-  --dark-color-a: #7b0ce9;
-  --dark-color-b: #9f99e6;
-  --light-color: #e6e9ff;
-  --success-color: #5cb85c;
+  --dark-color-a: #0d634a;
+  --dark-color-b: #41af90;
+  --light-color: #dbf4ed;
+  --success-color: #17d917;
   --error-color: #d9534f;
 }
 
@@ -108,6 +108,7 @@ a {
 }
 
 .chat-messages .message .meta span {
+  float: right;
   color: #777;
 }
 

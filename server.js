@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const http = require("http");
@@ -18,14 +19,13 @@ const server = http.createServer(app);
 const io = socketio(server);
 const botName = "Chatbot";
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT;
 
 //connect to database and then server starts listening
-const dbURI =
-  "mongodb+srv://anony:ynona@cluster0.rqcrh.mongodb.net/chatsdb?retryWrites=true&w=majority";
+
 
 mongoose
-  .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) =>
     server.listen(PORT, () =>
       console.log(`Server is listening on PORT ${PORT}`)
